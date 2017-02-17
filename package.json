@@ -1,6 +1,6 @@
 {
   "name": "koa-router-form-parser",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Koa-router@next formidable middleware",
   "main": "index.js",
   "scripts": {
@@ -8,20 +8,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brainqi1991/koa-router-form-parser.git"
+    "url": "git+https://github.com/qixin1991/koa-router-form-parser.git"
   },
   "keywords": [
     "Koa-router",
     "formidable",
     "form-parser",
-    "middleware"
+    "middleware",
+    "koa router form parser"
   ],
-  "author": "Brain Qi <brainqi@outlook.com>",
+  "author": "Qi Xin <me@qixin.io>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/brainqi1991/koa-router-form-parser/issues"
+    "url": "https://github.com/qixin1991/koa-router-form-parser/issues"
   },
-  "homepage": "https://github.com/brainqi1991/koa-router-form-parser#readme",
+  "homepage": "https://github.com/qixin1991/koa-router-form-parser#readme",
   "dependencies": {
     "formidable": "^1.1.1"
   }
