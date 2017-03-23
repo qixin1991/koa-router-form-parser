@@ -27,7 +27,7 @@ app.use(formParser());
 
 app.use(userRouter.routes());
 
-var port = 3000;
+let port = 3000;
 app.listen(port, function () {
   console.log(` ---> Server running on port: ${port}`);
 });
@@ -37,10 +37,10 @@ app.listen(port, function () {
 
 ```
 "use strict";
-var router = require('koa-router')();
+let router = require('koa-router')();
 
 router.post('/users/upload', async ctx => {
-    var file = await ctx.formParse();
+    let file = await ctx.formParse();
     console.log(file);
     ctx.body = {code: 200, data: file};
 });
