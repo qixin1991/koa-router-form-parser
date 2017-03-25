@@ -1,4 +1,5 @@
-const formidable = require('formidable');
+const formidable = require('formidable'),
+    os = require('os');
 
 module.exports = () => {
     return async (ctx, next) => {
@@ -7,7 +8,7 @@ module.exports = () => {
          * @param {int} maxFieldsSize - Limits the amount of memory all fields together (except files) can allocate in bytes. If this value is exceeded, an 'error' event is emitted. The default size is 5MB.
          * @param {bool} onlyPathReturned - only return the first uploaded file path, default is true.
          */
-        ctx.formParse = ({ uploadDir, maxFieldsSize = 5 * 1024 * 1024, onlyPathReturned = true } = {}) => {
+        ctx.formParse = ({ uploadDir = os.tmpdir(), maxFieldsSize = 5 * 1024 * 1024, onlyPathReturned = true } = {}) => {
             return new Promise((resolve, reject) => {
                 let form = new formidable.IncomingForm();
                 form.uploadDir = uploadDir;
